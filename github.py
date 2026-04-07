@@ -30,6 +30,14 @@ while True:
         
         # show score using the function
         print(score(guess_count))
-        break  # exit the loop when correct
+        guess_count = 0
+        again = input("would you like to try again? ")
+        if again.lower() == "yes":
+            answer = random.randint(1,1000)
+        elif again.lower() == "no":
+            print("thanks for playing")
+            break
+        else:
+            break
 
 print("end")  # game finished
